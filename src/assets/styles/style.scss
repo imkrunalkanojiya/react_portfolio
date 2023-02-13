@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Source Sans 3", sans-serif;
+}
+
+@mixin width414px {
+    @media (max-width: 414px) { @content; }
+  }
+  @mixin width600px {
+    @media (max-width: 600px) { @content; }
+  }
+  @mixin width998px {
+    @media (max-width: 998px) { @content; }
+  }
+  @mixin width1200px {
+    @media (max-width: 1200px) { @content; }
+  }
+  @mixin width1440px {
+    @media (max-width: 1440px) { @content; }
+  }
+  @mixin width1800px {
+    @media (max-width: 1800px) { @content; }
+  }
+
+#app-main {
+  width: 100%;
+}
+
+#app-nav {
+  width: 100%;
+  background: linear-gradient(300deg, deepskyblue, darkviolet, blue);
+  background-size: 180% 180%;
+  animation: gradient-animation 6s ease infinite;
+
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  .container {
+    width: 75%;
+    margin: 0 auto;
+    .menu {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 80px;
+      
+      a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+        line-height: 1.6em;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+#app-page {
+  width: 100%;
+}
+
+#page-home {
+  width: 100%;
+  .hero-section {
+    width: 100%;
+    background-color: #eaeaea;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+    margin-bottom: 60px;
+    .container {
+      width: 40%;
+      margin: 0 auto;
+      height: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include width1440px{
+        height: 520px;
+      }
+      @include width1200px{
+        width: 60%;
+      }
+      @include width600px{
+        width: 75%;
+      }
+      .content {
+        text-align: center;
+        h1 {
+          font-size: 48px;
+          line-height: 1.3em;
+          color: #000;
+          margin-bottom: 10px;
+          @include width600px{
+            font-size: 38px;
+          }
+        }
+        h4 {
+          font-size: 22px;
+          color: #333;
+          font-weight: 400;
+          line-height: 1.6em;
+          margin-bottom: 30px;
+          @include width600px{
+            font-size: 20px;
+          }
+        }
+        a {
+          background: linear-gradient(300deg, deepskyblue, darkviolet, blue);
+          background-size: 180% 180%;
+          animation: gradient-animation 6s ease infinite;
+          font-size: 24px;
+          padding: 10px 34px;
+          color: #fff;
+          text-transform: uppercase;
+          border: none;
+          box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+          cursor: pointer;
+          text-decoration: none;
+          &:hover {
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          }
+        }
+      }
+    }
+  }
+  .about-section {
+    width: 100%;
+    padding-bottom: 80px;
+    .container {
+      width: 75%;
+      margin: 0 auto;
+      .heading {
+        text-align: center;
+        padding: 0px 320px;
+        margin-bottom: 60px;
+        @include width1440px{
+            padding: 0px 200px;
+        }
+        @include width1200px{
+            padding: 0px 140px;
+        }
+        @include width998px{
+            padding: 0px 0px;
+            margin-bottom: 40px;
+        }
+        h2 {
+          font-size: 42px;
+          line-height: 1.3em;
+          color: #000;
+          margin-bottom: 10px;
+        }
+        p {
+          font-size: 22px;
+          line-height: 1.6em;
+          color: #333;
+        }
+      }
+      .row {
+        width: 100%;
+        display: flex;
+        @include width998px{
+            flex-wrap: wrap;
+        }
+        .content {
+          width: 50%;
+          padding-right: 40px;
+          @include width998px{
+            width:100%;
+            padding-right: 0;
+            text-align: center;
+            margin-bottom: 40px;
+          }
+          h3 {
+            font-size: 28px;
+            font-weight: 600;
+            line-height: 1.6em;
+            margin-bottom: 10px;
+          }
+          p {
+            margin-bottom: 16px;
+            line-height: 1.6em;
+            font-size: 18px;
+            color: #333;
+          }
+        }
+        .tech {
+          width: 50%;
+          @include width998px{
+            width:100%;
+            text-align: center;
+          }
+          h3 {
+            font-size: 28px;
+            font-weight: 600;
+            line-height: 1.6em;
+            margin-bottom: 10px;
+          }
+          .tech-stacks {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            @include width998px{
+                justify-content: center;
+            }
+            svg {
+              font-size: 64px;
+              margin-right: 20px;
+              margin-bottom: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#app-footer {
+  width: 100%;
+  background: linear-gradient(300deg, deepskyblue, darkviolet, blue);
+  background-size: 180% 180%;
+  animation: gradient-animation 6s ease infinite;
+  .container{
+    width: 75%;
+    margin: 0 auto;
+    .row{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+        @include width600px{
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 120px;
+        }
+        .follow-sec{
+            margin-bottom: -10px;
+            @include width600px{
+                margin-bottom: 10px;
+            }
+            a{
+                margin-right: 10px;
+             svg{
+                font-size: 24px;
+                fill: #fff;
+             }
+            }
+        }
+        .copyrights-sec{
+            p{
+                color:#fff;
+                line-height: 1.6em;
+            }
+        }
+    }
+  }
+}
+
+
+@keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
